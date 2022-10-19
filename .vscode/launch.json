@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-ProgramServiceApplication<program-service>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "dev.bigdecimal.yorpat.api.programservice.ProgramServiceApplication",
+      "projectName": "program-service",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

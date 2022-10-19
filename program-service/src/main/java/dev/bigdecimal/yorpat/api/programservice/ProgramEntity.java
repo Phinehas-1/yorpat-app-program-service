@@ -1,7 +1,7 @@
 
 package dev.bigdecimal.yorpat.api.programservice;
 
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,6 +19,7 @@ public class ProgramEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long programId;
+    @Column(name = "programDesc")
     private String programName;
     @Column(nullable = false)
     private Date programDate;
