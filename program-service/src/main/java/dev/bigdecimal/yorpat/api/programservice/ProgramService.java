@@ -34,12 +34,17 @@ public class ProgramService {
         }
     }
 
-    public List<ProgramEntity> getAllPrograms() throws Exception {
+    public List<ProgramModel> getAllPrograms() throws Exception {
         try {
-            List<ProgramEntity> programs = new ArrayList<>();
+            List<ProgramModel> programs = new ArrayList<>();
             Iterator<ProgramEntity> iterator = repo.findAll().iterator();
             while (iterator.hasNext()) {
-                programs.add(iterator.next());
+                ProgramEntity entity = iterator.next();
+                ProgramModel model = new ProgramModel();
+                model.setProgramId(entity.getProgramId());
+                model.setProgramName(entity.getProgramName());
+                model.setProgramDate(String.valueOf(entity.getProgramDate()));
+                programs.add(model);
             }
             return programs;
         } catch (Exception e) {

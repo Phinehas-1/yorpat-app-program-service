@@ -52,7 +52,7 @@ public class ProgramResource {
     @GetMapping("/getAllPrograms")
     public ResponseEntity<? extends Object> getAllPrograms() {
         try {
-            List<ProgramEntity> programs = service.getAllPrograms();
+            List<ProgramModel> programs = service.getAllPrograms();
             if (programs.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
