@@ -18,7 +18,7 @@ public class ProgramServiceApplication {
 	public DataSource dataSource() {
 		return DataSourceBuilder.create()
 				.driverClassName(System.getenv("DATABASE_DRIVER_CLASS"))
-				.url(System.getenv("DATABASE_URL"))
+				.url(System.getenv("DATABASE_URL") + System.getenv("SSL_MODE"))
 				.username(System.getenv("DATABASE_USER"))
 				.password(System.getenv("DATABASE_PASSWORD"))
 				.build();
